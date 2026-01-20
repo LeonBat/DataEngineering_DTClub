@@ -21,12 +21,23 @@ docker run -it --rm\
 
 
 
-docker run -it \
-  --network=pg-network \
+docker run -it --rm \
+  --network=pipeline_default \
   taxi_ingest:v001 \
-    --user=root \
-    --password=root \
-    --host=pgdatabase \
-    --port=5432 \
-    --db=ny_taxi \
-    --table=yellow_taxi_trips
+    --pg_user=root \
+    --pg_password=root \
+    --pg_host=pgdatabase \
+    --pg_port=5432 \
+    --pg_db=ny_taxi \
+    --target_table=yellow_taxi_trips_2021_1 \
+    --chunksize=100000
+
+
+docker run -it \
+  -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
+  -e PGADMIN_DEFAULT_PASSWORD="root" \
+  -v pgadmin_data:/var/lib/pgadmin \
+  -p 8085:80 \
+  --network=pg-network \
+  --name pgadmin \
+  dpage/pgadmin4
