@@ -1,0 +1,11 @@
+version : 2
+
+sources:
+  - name: raw_data
+    description: "Raw data sources for NYC taxi rides"
+    database: natural-oath-484714-i1
+    schema: ny_taxi_homework4
+
+    tables:
+      - name: green_tripdata_partitioned
+      - name: yellow_tripdata_partitioned
