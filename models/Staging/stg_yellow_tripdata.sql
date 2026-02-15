@@ -14,6 +14,7 @@ select
     cast(trip_distance as float64)        as trip_distance,
     cast(ratecodeid as float64)           as rate_code_id,
     cast(store_and_fwd_flag as string)    as store_and_forward_flag,
+    1 as trip_type -- yellow taxis can only be street-hail
 
     -- payment information
     cast(fare_amount as float64)          as fare_amount,
@@ -22,6 +23,7 @@ select
     cast(tip_amount as float64)           as tip_amount,
     cast(tolls_amount as float64)         as tolls_amount,
     cast(improvement_surcharge as float64) as improvement_surcharge,
+    0 as ehail_fee, --yellow taxis do not have ehail fees
     cast(congestion_surcharge as float64)  as congestion_surcharge,
     cast(airport_fee as float64)          as airport_fee,
     cast(total_amount as float64)         as total_amount,
