@@ -1,8 +1,8 @@
-with green_tripdata_partitioned as (
+with green_tripdata as (
     select * from {{ref('stg_green_tripdata')}} 
 ),
 
- yellow_tripdata_partitioned as (
+ yellow_tripdata as (
     select * from {{ref('stg_yellow_tripdata')}} 
 )
 
@@ -11,3 +11,5 @@ trips_unioned as (
     union all
     select * from yellow_tripdata
 )
+
+select * from trips_unioned

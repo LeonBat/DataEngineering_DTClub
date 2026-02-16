@@ -28,4 +28,6 @@ select
     cast(total_amount as float64)         as total_amount,
     cast(payment_type as float64)         as payment_type
 
-{{source("raw_data", "green_tripdata_partitioned")}}
+ from {{source("raw_data", "green_tripdata_partitioned")}}
+
+where vendorid is not null

@@ -30,3 +30,5 @@ select
     cast(payment_type as float64)         as payment_type
 
 from {{ source('raw_data', 'yellow_tripdata_partitioned') }}
+
+where vendorid is not null

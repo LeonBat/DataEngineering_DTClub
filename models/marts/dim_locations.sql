@@ -1,6 +1,6 @@
 with taxi_zone_loolup as (
     with taxi_zone_lookup as (
-        select * from {{ ref("taxi_zone_lookup") }}
+        select * from {{ ref("Staging", "taxizones_lookup") }}
     )
 )
 
