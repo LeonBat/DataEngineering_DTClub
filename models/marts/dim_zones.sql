@@ -3,4 +3,4 @@ select
     borough,
     zone,
     service_zone
-from {{ ref('taxizones_lookup') }}
+from {{ ref('stg_taxizones') }}
