@@ -1,6 +1,9 @@
 *.parquet
 *.json
 *.tf
+*.csv
+*.crc
+_SUCCESS
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
