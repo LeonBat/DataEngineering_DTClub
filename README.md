@@ -15,7 +15,8 @@ I am participating in the current cohort of the data engineering course of DataT
 I completed some workshops in a seperate github repository
 
 Pyflink / Streaming Workshop: [Link to Repo](https://github.com/LeonBat/Pyflink_Streaming_Workshop)
-DLT Sworkshop: [Link to Repo](https://github.com/LeonBat/DLT_Workshop)
+
+DLT Workshop: [Link to Repo](https://github.com/LeonBat/DLT_Workshop)
 
 
 My **final project** can be found here: [Link to final project](https://github.com/LeonBat/GitPulse-Unraveling-Open-Source-Evolution)
